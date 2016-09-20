@@ -36,7 +36,7 @@ export default {
     transformData(params) {
         $.each(params, function(index, value) {
             for (var key in value) {
-                if (value[key] ==='') {value[key] = '-'}
+                if (value[key] === null) {value[key] = '-'}
             }
         })
         return params;
