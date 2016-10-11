@@ -4,7 +4,7 @@ import Constant from './constant';
 
 export default {
     getDetailBySize(params) {
-        params.path = '/mock.json';
+        params.path = './mock.json';
         request(params);
     }
 };

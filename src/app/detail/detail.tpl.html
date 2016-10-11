@@ -27,8 +27,8 @@
     <div class="details-chose">
         <h3><i class="fa fa-pie-chart"></i>颜色</h3>
         <small>选择一个颜色</small>
-        <dl>
-            <dd style="background-color: #f0c9ce;">
+        <dl class="color-check-toggle">
+            <dd style="background-color: #f0c9ce;" class="active">
                 <i class="icon icon-check"></i>
             </dd>
             <dd style="background-color: #af687a;">
@@ -41,8 +41,8 @@
         <hr>
         <h3><i class="fa fa-maxcdn"></i>尺寸</h3>
         <small>选择你的尺寸</small>
-        <ul class="diff-size">
-            <li>38</li>
+        <ul class="diff-size size-check-toggle">
+            <li class="active">38</li>
             <li>39</li>
             <li>40</li>
             <li>41</li>
@@ -57,7 +57,7 @@
         <h3><i class="fa fa-maxcdn"></i>身高&体重</h3>
         <small>选择你的身高和体重</small>
         <label>身高：
-            <input type="number" name="height">英寸</label>
+            <input type="number" name="height">cm</label>
         <label>体重：
             <input type="number" name="weight">kg</label>
         <div class="custom-chose">

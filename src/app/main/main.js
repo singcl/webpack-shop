@@ -7,8 +7,7 @@ export default {
     init() {
             var that = this;
             //下面的初始化函数必须按一定顺序。即必须先有dom文档
-            this.renderMainTpl();
-            this.setPicture();
+            this.renderMainTpl(); 
             this.initSwiper();
         },
 
@@ -16,6 +15,7 @@ export default {
             // var html = Tool.renderTpl(mainHtml, data);
             var html = mainHtml;
             $('.main-page .page-content').html(html);
+            this.setPicture();
         },
 
         setPicture() {

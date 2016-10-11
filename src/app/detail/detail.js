@@ -26,6 +26,8 @@ export default {
                     this.bindModifySize();
                     this.bindPlus();
                     this.bindMinus();
+                    this.checkColor();
+                    this.checkSize();
                 }
             };
             Xhr.getDetailBySize(params);
@@ -75,6 +77,20 @@ export default {
                 adjust = +adjust;
                 adjust--;
                 $(this).next().val(adjust);
+            })
+        },
+
+        checkColor() {
+            $('.color-check-toggle').on('click', '.color-check-toggle > dd', function() {
+                $('.color-check-toggle').children().removeClass('active');
+                $(this).toggleClass('active');
+            })
+        },
+
+        checkSize() {
+            $('.size-check-toggle').on('click', '.size-check-toggle > li', function() {
+                $('.size-check-toggle').children().removeClass('active');
+                $(this).toggleClass('active');
             })
         }
 
