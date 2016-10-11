@@ -1,0 +1,29 @@
+<div class="row no-gutter">
+    <div class="col-40">位置</div>
+    <div class="col-20">英寸</div>
+    <div class="col-40">调整</div>
+</div>
+{{#each this}}
+<div class="row no-gutter">
+    <div class="col-40">{{name}}</div>
+    <div class="col-20">{{size}}</div>
+    <div class="col-40">
+        <div class="input-group wrapper-ma">
+            <span class="size-minus">-</span>
+            <input type="tel" value="{{adjust}}">
+            <span class="size-add">+</span>
+        </div>
+    </div>
+</div>
+{{/each}}
+<hr>
+<div class="row no-gutter">
+    <div class="col-50 quantity">
+        <span>订购数量：</span>
+        <div class="input-group wrapper-ma">
+            <span class="size-minus">-</span>
+            <input type="tel" value="1">
+            <span class="size-add">+</span>
+        </div>
+    </div>
+</div>

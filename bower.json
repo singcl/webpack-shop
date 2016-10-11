@@ -1,0 +1,24 @@
+{
+  "name": "webpack-shop",
+  "description": "基于Framework7，使用webpack搭建的前端移动端项目",
+  "main": "index.js",
+  "authors": [
+    "singcl"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "shop"
+  ],
+  "homepage": "https://github.com/singcl/webpack-f7",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.6.3"
+  }
+}

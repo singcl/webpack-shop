@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <title>singcl</title>
 </head>
+
 <body class="#03a9f4">
     <div class="statusbar-overlay"></div>
     <div class="panel-overlay"></div>
@@ -22,12 +24,12 @@
                     <!-- navbar -->
                     <div class="navbar">
                         <div class="navbar-inner">
-                            <div class="left">
-                                <a href="#" class="link icon-only exit">
-                                    <i class="icon icon-back1"></i>
+                            <div class="center">Smart Shirt</div>
+                            <div class="right">
+                                <a href="./page/shopping-cart.html" class="link icon-only">
+                                    <i class="icon icon-shop"></i>
                                 </a>
                             </div>
-                            <div class="center">成绩查询</div>
                         </div>
                     </div>
                     <!-- /navbar -->
@@ -38,7 +40,90 @@
         </div>
     </div>
     <!-- / views -->
-    <script src="applocal://www/cordova.min.js"></script>
+    <!-- Popup -->
+    <div class="popup detail-popup">
+        <!-- Top Navbar-->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="link icon-only close-popup">
+                        <i class="icon icon-back1"></i>
+                    </a>
+                </div>
+                <div class="center">定制详情</div>
+                <div class="left">
+                    <a href="#" class="link icon-only close-popup">
+                        <i class="icon icon-down"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content-block custom-details">
+            <dl class="detail-base">
+                <dd>
+                    颜色：random
+                </dd>
+                <dd>
+                    尺寸：41inch
+                </dd>
+                <dd>
+                    身高：156cm
+                </dd>
+                <dd>
+                    体重：66kg
+                </dd>
+            </dl>
+            <hr>
+            <h3>尺寸明细</h3>
+            <hr>
+            <div class="custom-chose">
+                <div class="row no-gutter">
+                    <div class="col-50"><b>位置</b></div>
+                    <div class="col-50"><b>英寸</b></div>
+                </div>
+                <div class="row no-gutter">
+                    <div class="col-50">颈围</div>
+                    <div class="col-50">14.96</div>
+                </div>
+                <div class="row no-gutter">
+                    <div class="col-50">胸围</div>
+                    <div class="col-50">36.61</div>
+                </div>
+                <div class="row no-gutter">
+                    <div class="col-50">腰围</div>
+                    <div class="col-50">34.25</div>
+                </div>
+                <div class="row no-gutter">
+                    <div class="col-50">臀围</div>
+                    <div class="col-50">35.43</div>
+                </div>
+                <div class="row no-gutter">
+                    <div class="col-50">总肩宽</div>
+                    <div class="col-50">15.15</div>
+                </div>
+                <div class="row no-gutter">
+                    <div class="col-50">袖长</div>
+                    <div class="col-50">22.63</div>
+                </div>
+                <div class="row no-gutter">
+                    <div class="col-50">衣长</div>
+                    <div class="col-50">24.40</div>
+                </div>
+                <div class="row no-gutter">
+                    <div class="col-50">袖口</div>
+                    <div class="col-50">7.87</div>
+                </div>
+                <hr>
+                <div class="row no-gutter">
+                    <div class="col-50 quantity">
+                        <span><b>订购数量：1</b></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="applocal://www/cordova.min.js"></script> -->
     <script type="text/javascript" src="app.js"></script>
 </body>
+
 </html>

@@ -8,75 +8,94 @@
     }
     .content-block {
         margin-top: 44px;
-        padding-top: 10px;
+        margin-bottom: 0;
+        padding: 0;
         background-color: #fff;
-        .avatar {
-            border-radius: 50%;
+        //广告-幻灯片
+        .swiper-container {
+            .swiper-slide {
+                background: #fff;
+                box-sizing: border-box;
+                span {
+                    display: block;
+                    font-size: 21px;
+                    text-align: center;
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
         }
+        //搜索框
+        .search-box {
+            width: 92%;
+            margin: 10px auto;
+            height: 44px;
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 0px 6px #bdbcbc;
+            i {
+                padding-left: 10px;
+            }
+            input[type="search"] {
+                line-height: 42px;
+                height: 42px;
+                border: none;
+                outline: none;
+                font-size: 14px;
+                width: 72%;
+            }
+        }
+        //产品
+        .product {overflow: auto;}
+        .product ul {
+            width: 100%;
+            overflow: hidden;
+            padding-left: 0;
+            li {
+                width: 44%;
+                float: left;
+                margin-left: 4%;
+                // margin-right: 4%;
+                overflow: hidden;
+                box-shadow: 0 1px 8px #BDBCBC;
+                background-color: #fff;
+                border-radius: 4px;
+                margin-bottom: 4%;
+            }
+            &:nth-child(2n) {
+                margin-left: 0;
+            }
+            img {
+                width: 100%;
+            }
+            a {
+                display: block;
+                width: 100%;
+            }
+            p {
+                margin: 0;
+                margin-top: 12px;
+                margin-bottom: 5px;
+                font-size: 11px;
+                color: #323c3f;
+                text-align: center;
+            }
+            span {
+                margin: 0;
+                margin-bottom: 12px;
+                display: block;
+                font-size: 8px;
+                color: #aaabbc;
+                text-align: center;
+            }
+        }
+        //伪类
         :before {
             height: 0;
         }
         :after {
             height: 0;
         }
-        p {
-            margin-top: 5px;
-        }
     }
-
-    .list-block ul {
-        background-color: transparent;
-    }
-
-    .list-block ul:before,
-    .list-block ul:after {
-        height: 0;
-    }
-
-    .list-block ul li {
-        margin: 10px 2px;
-        text-align: center;
-        background-color: #fff;
-        border-radius: 30px;
-        .item-inner:before,
-        .item-inner:after {
-            height: 0;
-           
-        }
-        .item-input {
-            position: relative;
-            display: inline-table;
-            span:first-child {
-                font-size: 18px;
-                font-weight: 700;
-            }
-            &:after {
-                height: 0;
-            }
-            label {
-                display: inline-table;
-                    input {
-                    display: table-cell;
-                    text-align: center;
-                }
-                span {
-                    display: table-cell;
-                    font-size: 16px;
-                }
-            }
-        }
-    }
-    
-    a.button {
-        height: auto;
-        margin: 0px 16px;
-        padding: 5px 0;
-        font-size: 16px;
-        border-radius: 15px;
-    }
-
-    .tips {
-        padding: 5px 16px;
-    }
-
 }

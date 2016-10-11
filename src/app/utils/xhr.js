@@ -3,20 +3,15 @@
 import Constant from './constant';
 
 export default {
-    // getQuery(params) {
-    //     params.path = '/api/v1/topics/?page=' + params.page + '&tab=' + params.tab + '&limit=10';
-    //     request(params);
-    // },
-    getDetailByYT(params) {
-        params.path = '/achievement/' + params.user_id + '/query?year=' + params.year + '&term=' + params.term;
-        // params.path = '/mock.json';
+    getDetailBySize(params) {
+        params.path = '/mock.json';
         request(params);
     }
 };
 
 function request(params) {
     var defaults = {
-        url: Constant.SERVER_URL + params.path,
+        url: params.path,
         type: 'GET',
         contentType: 'application/json',
         dataType: 'json',

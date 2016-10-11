@@ -10,7 +10,7 @@ import Router from './router';
 import Loading from './components/loading';
 
 var app = {
-    init(){
+    init() {
         var that = this;
         // Init App
         window.$ = Dom7;
@@ -24,6 +24,7 @@ var app = {
         });
     
         Router.init();
+        mainModule.init();
     },
     
     //如果需要调用cordova 需要在deviceReady后 调用 mainModule.init()
@@ -54,10 +55,3 @@ var app = {
 app.init();
 //设备就绪后开始初始化主页
 //app.deviceReady();
-
-var data = {
-   'user_id': '3120604130',
-    'name': 'xxxxx',
-    'avatar': null
-}
-mainModule.init(data);
