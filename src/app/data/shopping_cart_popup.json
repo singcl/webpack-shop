@@ -1,0 +1,45 @@
+{
+    "status": "ok",
+    "message": "",
+    "result": [{
+        "base": [{
+            "name": "height",
+            "value": "132"
+        }, {
+            "name": "weight",
+            "value": "66"
+        }, {
+            "name": "color",
+            "value": "red"
+        }, {
+            "name": "size",
+            "value": "41"
+        }],
+        "detail": [{
+                "position": "颈围",
+                "size": "14.96"
+            }, {
+                "position": "胸围",
+                "size": "36.61"
+            }, {
+                "position": "腰围",
+                "size": "34.25"
+            }, {
+                "position": "臀围",
+                "size": "35.43"
+            }, {
+                "position": "肩宽",
+                "size": "15.15"
+            }, {
+                "position": "袖长",
+                "size": "22.63"
+            }, {
+                "position": "衣长",
+                "size": "24.40"
+            }, {
+                "position": "袖口",
+                "size": "7.87"
+            }
+        ]
+    }]
+}

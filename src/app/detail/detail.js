@@ -8,29 +8,24 @@ import sizeTpl from './blocks/size.tpl.html';
 import Constant from '../utils/constant';
 import Tool from '../utils/tool';
 import Loading from '../components/loading';
-import Xhr from '../utils/xhr';
 
 export default {
     init() {
             this.renderMainTpl();
+            this.setPicture();
+            this.bindModifySize();
+            this.bindPlus();
+            this.bindMinus();
+            this.checkColor();
+            this.checkSize();
         },
         renderMainTpl() {
-            var params = {
-                success: (res) => {
-                    var data = res.result[0].size38;
-                    console.log(data);
-                    var html = Template7.compile(detailTpl)(data);
-                    $('.detail-page .page-content').append(html);
-                    //模板渲染，加载是异步的。所以图片加载也必须在这里。不然会被覆盖。
-                    this.setPicture();
-                    this.bindModifySize();
-                    this.bindPlus();
-                    this.bindMinus();
-                    this.checkColor();
-                    this.checkSize();
-                }
-            };
-            Xhr.getDetailBySize(params);
+            //nodejs require()语法 + webpack loaders加载静态json
+            var data = Constant.SIZE_JSON.result[0].size38;
+            console.log(JSON.stringify(data));
+            var html = Template7.compile(detailTpl)(data);
+            $('.detail-page .page-content').append(html);
+            //模板渲染，加载是异步的(现在去掉了ajax已经不是异步了)。所以图片加载也必须在这里。不然会被覆盖。
         },
 
         setPicture() {
@@ -42,23 +37,18 @@ export default {
             $('.details-chose').on('click', '.diff-size li', function() {
                 var size = this.innerHTML;
                 var size = 'size' + size;
-                var params = {
-                    success: (res) => {
-                        var data = res.result[0];
-                        //for循环保证有匹配项才渲染
-                        for (let item in data) {
-                            if (item == size) {
-                                //这里必须使用[ ]寻址，点号寻址 变量会被当成字符串
-                                var result = data[item];
-                                console.log(result);
-                                var html = Template7.compile(sizeTpl)(result);
-                                $('.details-chose .custom-chose').html(html);
-                                break;
-                            }
-                        }
+                var data = Constant.SIZE_JSON.result[0];
+                //for循环保证有匹配项才渲染
+                for (let item in data) {
+                    if (item == size) {
+                        //这里必须使用[ ]寻址，点号寻址 变量会被当成字符串
+                        var result = data[item];
+                        console.log(JSON.stringify(result));
+                        var html = Template7.compile(sizeTpl)(result);
+                        $('.details-chose .custom-chose').html(html);
+                        break;
                     }
-                };
-                Xhr.getDetailBySize(params);
+                }
             })
         },
 

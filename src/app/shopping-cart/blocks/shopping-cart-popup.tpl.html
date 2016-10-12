@@ -1,0 +1,47 @@
+<!-- Top Navbar-->
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="left">
+            <a href="#" class="link icon-only close-popup">
+                <i class="icon icon-back1"></i>
+            </a>
+        </div>
+        <div class="center">定制详情</div>
+        <div class="left">
+            <a href="#" class="link icon-only close-popup">
+                <i class="icon icon-down"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="content-block custom-details">
+    <dl class="detail-base">
+        {{#each base}}
+        <dd>
+            {{this.name}}：{{this.value}}
+        </dd>
+        {{/each}}
+    </dl>
+    <hr>
+    <h3>尺寸明细</h3>
+    <hr>
+    <div class="custom-chose">
+        <div class="row no-gutter">
+            <div class="col-50"><b>位置</b></div>
+            <div class="col-50"><b>英寸</b></div>
+        </div>
+        {{#each detail}}
+        <div class="row no-gutter">
+            <div class="col-50">{{this.position}}</div>
+            <div class="col-50">{{this.size}}</div>
+        </div>
+        {{/each}}
+        <hr>
+        <div class="row no-gutter">
+            <div class="col-50 quantity">
+                <span><b>订购数量：1</b></span>
+            </div>
+        </div>
+    </div>
+</div>

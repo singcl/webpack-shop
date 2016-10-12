@@ -1,0 +1,25 @@
+{
+    "status": "ok",
+    "message": "",
+    "result": [{
+        "name": "商务衬衫",
+        "size": "41",
+        "price": "￥39.99",
+        "number": "1"
+    }, {
+        "name": "商务衬衫",
+        "size": "41",
+        "price": "￥39.99",
+        "number": "1"
+    }, {
+        "name": "商务衬衫",
+        "size": "41",
+        "price": "￥39.99",
+        "number": "1"
+    }, {
+        "name": "商务衬衫",
+        "size": "41",
+        "price": "￥39.99",
+        "number": "1"
+    }]
+}

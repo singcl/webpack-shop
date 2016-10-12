@@ -7,15 +7,17 @@ export default {
     init() {
             var that = this;
             //下面的初始化函数必须按一定顺序。即必须先有dom文档
-            this.renderMainTpl(); 
+            this.renderMainTpl();
+            this.setPicture(); 
             this.initSwiper();
+            this.goToDetail();
         },
 
         renderMainTpl() {
             // var html = Tool.renderTpl(mainHtml, data);
-            var html = mainHtml;
+            var data = Constant.MAIN.JSON[0].result;
+            var html = Template7.compile(mainHtml)(data);
             $('.main-page .page-content').html(html);
-            this.setPicture();
         },
 
         setPicture() {
@@ -30,6 +32,12 @@ export default {
         initSwiper() {
             myApp.swiper('.banner', {
                 pagination: '.swiper-pagination'
+            })
+        },
+
+        goToDetail() {
+            $('.go-to-detail').on('click', '.go-to-detail img' ,function() {
+                myApp.getCurrentView().router.loadPage('./page/detail.html');
             })
         }
 };

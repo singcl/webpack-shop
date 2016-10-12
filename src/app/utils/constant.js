@@ -17,6 +17,18 @@ export default {
             require('../../assets/images/main_pic2.jpg'),
             require('../../assets/images/main_pic3.jpg'),
             require('../../assets/images/main_pic4.jpg')
+        ],
+        JSON: [
+            require('../data/main_list.json')
         ]
-    }
+    },
+    
+    SHOPPING_CART: {
+        JSON: [
+            require('../data/shopping_cart_list.json'),
+            require('../data/shopping_cart_popup.json')
+        ]
+    },
+    //nodejs require()语法 + webpack loaders加载静态json
+    SIZE_JSON: require('../data/mock.json')
 };

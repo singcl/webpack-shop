@@ -1,9 +1,9 @@
 <div class="content-block">
     <div class="banner swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><span><a href="./page/detail.html"><img alt="..."></a></span></div>
-            <div class="swiper-slide"><span><a href="./page/detail.html"><img alt="..."></a></span></div>
-            <div class="swiper-slide"><span><a href="./page/detail.html"><img alt="..."></a></span></div>
+        <div class="swiper-wrapper go-to-detail">
+            <div class="swiper-slide"><span><img alt="..."></span></div>
+            <div class="swiper-slide"><span><img alt="..."></span></div>
+            <div class="swiper-slide"><span><img alt="..."></span></div>
         </div>
         <div class="swiper-pagination"></div>
     </div>
@@ -13,34 +13,15 @@
     </div>
     <div class="product">
         <ul>
+            {{#each this}}
             <li>
-                <a href="./page/detail.html">
-                    <img>
-                    <p>衬衫</p>
-                    <span>￥60.99</span>
+                <a href="{{router_url}}">
+                    <img alt="...">
+                    <p>{{name}}</p>
+                    <span>{{price}}</span>
                 </a>
             </li>
-            <li>
-                <a href="./page/detail.html">
-                    <img>
-                    <p>衬衫</p>
-                    <span>￥60.99</span>
-                </a>
-            </li>
-            <li>
-                <a href="./page/detail.html">
-                    <img>
-                    <p>衬衫</p>
-                    <span>￥60.99</span>
-                </a>
-            </li>
-            <li>
-                <a href="./page/detail.html">
-                    <img>
-                    <p>衬衫</p>
-                    <span>￥60.99</span>
-                </a>
-            </li>
+            {{/each}}
         </ul>
     </div>
 </div>

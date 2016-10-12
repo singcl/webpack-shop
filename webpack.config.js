@@ -34,6 +34,7 @@ var config = {
             { test: /\.less$/, loader: ExtractTextPlugin.extract("style-loader", 'css-loader?sourceMap!autoprefixer-loader!less-loader') },
             { test: /\.js$/, loader: 'babel', exclude: /(node_modules|bower_components)/ },
             { test: /\.html$/, loader: 'html' },
+            { test: /\.json$/, loader: 'json' },
             { test: /\.png$/, loader: 'url?limit=8192&mimetype=image/png' },
             { test: /\.jpe?g$/, loader: 'url?limit=8192&mimetype=image/jpg' },
             { test: /\.gif$/, loader: 'url?limit=8192&mimetype=image/gif' },

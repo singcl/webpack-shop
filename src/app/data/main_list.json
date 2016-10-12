@@ -1,0 +1,21 @@
+{
+    "status": "ok",
+    "message": "",
+    "result": [{
+        "name": "衬衫",
+        "router_url": "./page/detail.html",
+        "price": "￥60.99"
+    }, {
+        "name": "衬衫",
+        "router_url": "./page/detail.html",
+        "price": "￥60.99"
+    }, {
+        "name": "衬衫",
+        "router_url": "./page/detail.html",
+        "price": "￥60.99"
+    }, {
+        "name": "衬衫",
+        "router_url": "./page/detail.html",
+        "price": "￥60.99"
+    }]
+}
